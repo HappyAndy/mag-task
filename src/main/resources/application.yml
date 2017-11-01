@@ -1,0 +1,23 @@
+spring:
+     server:
+        port: 8080
+     datasource:
+        name: mydb
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/mysql
+        username: root
+        password: zhengjiaqi
+        driver-class-name: com.mysql.jdbc.Driver
+        minIdle: 1
+        maxActive: 2
+        initialSize: 1
+        timeBetweenEvictionRunsMillis: 3000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 'ZTM' FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+mybatis:
+  mapper-locations: classpath:com/cmig/magtask/mapper/*.xml
+  type-aliases-package: com.cmig.magtask.entity
+    
